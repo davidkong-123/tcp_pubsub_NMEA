@@ -35,10 +35,8 @@ add_subdirectory(thirdparty/recycle EXCLUDE_FROM_ALL)
 
 # Generic samples
 if (TCP_PUBSUB_BUILD_SAMPLES)
-    add_subdirectory(samples/performance_publisher)
-    add_subdirectory(samples/performance_subscriber)
-    add_subdirectory(samples/hello_world_publisher)
-    add_subdirectory(samples/hello_world_subscriber)
+    add_subdirectory(samples/GPZDA_publisher)
+    add_subdirectory(samples/GPZDA_subscriber)
 endif()
 
 # Specific eCAL Samples that tunnel an eCAL Topic through TCP

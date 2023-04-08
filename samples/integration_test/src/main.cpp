@@ -10,7 +10,7 @@ int main()
 {
   {
     std::shared_ptr<tcp_pubsub::Executor> executor = std::make_shared<tcp_pubsub::Executor>(6);
-    tcp_pubsub::Publisher hello_world_publisher(executor, 1588);
+    tcp_pubsub::Publisher GPZDA_publisher(executor, 1588);
   }
 
   std::this_thread::sleep_for(std::chrono::milliseconds(10));

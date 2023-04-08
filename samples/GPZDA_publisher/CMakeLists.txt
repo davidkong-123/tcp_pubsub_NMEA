@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-project(hello_world_subscriber)
+project(GPZDA_publisher)
 
 set(CMAKE_CXX_STANDARD 14)
 

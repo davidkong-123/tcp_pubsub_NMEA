@@ -11,8 +11,8 @@ int main()
 {
   const std::shared_ptr<tcp_pubsub::Executor> executor = std::make_shared<tcp_pubsub::Executor>(4);
 
-  tcp_pubsub::Subscriber hello_world_subscriber(executor);
-  auto session1 = hello_world_subscriber.addSession("127.0.0.1", 1588);
+  tcp_pubsub::Subscriber GPZDA_subscriber(executor);
+  auto session1 = GPZDA_subscriber.addSession("127.0.0.1", 1588);
 
   const std::function<void(const tcp_pubsub::CallbackData& callback_data)>callback_function
         = [](const tcp_pubsub::CallbackData& callback_data) -> void
@@ -21,7 +21,7 @@ int main()
             std::cout << "Received playload: " << temp_string_representation << std::endl;
           };
 
-  hello_world_subscriber.setCallback(callback_function);
+  GPZDA_subscriber.setCallback(callback_function);
     
   // Prevent the application from exiting immediatelly
   for (;;) std::this_thread::sleep_for(std::chrono::milliseconds(500));
